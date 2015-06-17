@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>株式会社ウイズ・ワン</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- レスポンシブを無効にする
+<link href="css/style-s.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" type="text/css">
+<link href="css/style-m.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)" type="text/css">-->
+<link href="css/jquery.fs.boxer.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+<script type="text/javascript" src="js/wiss1.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+  setInterval("slideSwitch()", 4000);
+
+  //メニューバーにマウスポインタを置いた時の処理
+  $('#menubar li').hover(function() {
+      //置いた場合
+      $("ul:not(:animated)", this).slideDown();
+  }, function() {
+      //離した場合
+      $("ul.child",this).slideUp();
+  });
+
+  $('.boxer').boxer();
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+     // スクロールの速度
+     var speed = 1000; // ミリ秒
+     // アンカーの値取得
+     var href= $(this).attr("href");
+     // 移動先を取得
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     // 移動先を数値で取得
+     var position = target.offset().top;
+     // スムーススクロール
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<div id="container">
+    <header>
+    <br />
+    <br />
+            <a href="./index.html"><img src="images/home_Logo.jpg" width="300" height="90" style="float:left"></a>
+    <br />
+    <br />
+            <h5><p><a href="mailto:info@wiss1.co.jp" style="float:right; text-decoration:none">▶︎お問い合わせ</a></p></h5>
+    <br />
+    <br />
+    </header>
+
+    <nav id="menu">
+        <ul id="menubar">
+            <li><a href="#info">会社情報<span>ああああああ</span></a>
+                <ul class="child">
+                    <li><a href="#kaisya">会社概要<span>ああああああ</span></a></li>
+                    <li><a href="#personal">組織構成<span>ああああああ</span></a></li>
+                    <li><a href="#group">役員紹介<span>ああああああ</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#event">事業案内<span>ああああああ</span></a>
+                <ul class="child">
+                    <li><a href="#event1">事業内容<span>ああああああ</span></a></li>
+                    <li><a href="#event2">取引先<span>ああああああ</span></a></li>
+                    <li><a href="#event3">開発実績<span>ああああああ</span></a></li>
+                    <li><a href="#event4">海外事業展開<span>ああああああ</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#soft">ソフトウェア技術本部<span>ああああああ</span></a>
+                <ul class="child">
+                    <li><a href="#soft1">SIソリューション事業部<span>ああああああ</span></a></li>
+                    <li><a href="#soft2">先端テクノロジー事業部<span>ああああああ</span></a></li>
+                    <li><a href="#soft3">インフラ事業部<span>ああああああ</span></a></li>
+                </ul>
+            </li>
+            <li><a href="recruit/index.html" target="_blank">採用情報<span>ああああああ</span></a>
+                <ul class="child">
+                </ul>
+            </li>
+            <li><a href="#recruit">アクセス<span>ああああああ</span></a>
+            </li>
+        </ul>
+    </nav>
+    <br />
+
+    <div id="slideshow">
+        <img src="" alt="Image 1" class="active" width="997" height="295" />
+        <img src="" alt="Image 2" width="997" height="295" />
+        <img src="" alt="Image 3" width="997" height="295" />
+    </div>
+
+    <div id="contents">
+    <div id="contents-in">
+    <div id="main">
+        <section>
+            <section>
+                <h2 id="info">会社情報</h2>
+               <section>
+                    <h3 id="kaisya">■会社概要</h3>
+                    <br/>
+                    <br/>
+                    <table class="ta1 mb1em">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社ウイズ・ワン</td>
+                        </tr>
+                        <tr>
+                            <th>本社所在地</th>
+                            <td>〒103-0011<br />
+                                東京都中央区日本橋大伝馬町3-3&nbsp;&nbsp;日本橋大伝馬町ビル 2F、4F、5F<br />
+                                【2F】営業本部、SE事業本部<br />
+                                【4F】総務部、経理部／受付<br />
+                                【5F】設計部、開発部
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>2000万円（授権払込資本　4800万円）</td>
+                        </tr>
+                        <tr>
+                            <th>連絡先</th>
+                            <td>
+                                電話：03-5623-6711（代表）<br />
+                                ファックス：03-5623-6712<br />
+                                メール：<a href="mailto:info@wiss1.co.jp">info@wiss1.co.jp</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>1999年1月1日</td>
+                        </tr>
+                        <tr>
+                            <th>決算月</th>
+                            <td>12月31日（年1回）</td>
+                        </tr>
+                        <tr>
+                            <th>従業員数</th>
+                            <td>47名（営業 3名、SE 22名、PG 20名、事務 2名）<br />
+                                42名（協力会社・契約社員）
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>役員</th>
+                            <td>
+                                代表取締役&nbsp;&nbsp;柴田 美知男<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小原 紹五<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岡田 武士<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;井手 浩太<br>
+                                執行役員&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;柴崎 和幸<br>
+                                監査役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工藤 浩昭<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宇都 陸海(ﾃﾞｨｽｺﾑ株式会社 代表取締役社長)<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;門田 正徳(ﾕｰ・ｱﾝﾄﾞ・ｱｰｽ株式会社 代表取締役社長)<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Udaya Mohan Shrestha(Web_ParkNepal Pvt.Ltd CEO)<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>取引先銀行</th>
+                            <td>みずほ銀行、三井住友銀行、東京信用金庫、三菱東京UFJ銀行</td>
+                        </tr>
+                        <tr>
+                            <th>現地法人</th>
+                            <td>WISS1(thAI)CO.Ltd、WISS1(NEPAL)CO.Ltd<br>WISS1 Philippines CO.Ltd（2008年度設立予定）</td>
+                        </tr>
+
+                    </table>
+                    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+                </section>
+                <section>
+                    <h3 id="personal">■組織構成</h3>
+                    <br />
+                    <p align="center"><img src="images/soshiki.jpg" alt="" width="521" height="629"></p>
+
+                <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+                </section>
+                <section>
+                    <h3 id="group">■役員紹介</h3>
+                    <img src="" width="997" height="295" />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </section>
+            </section>
+
+                <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+            <section>
+                <h2 id="event">事業案内</h2>
+                <section>
+                <h3 id="event1">■事業内容</h3>
+                <p>
+                  &nbsp;&nbsp;当社では主にオープンシステム開発を中心とした業務システムの提案、システム開発を行っています。<br/> 
+                  現在は大手SIer殿や大手電機メーカー殿との共同作業が中心ですが、単なる開発としてではなく上流工程（要件定義・システム設計）
+                  から下流工程（開発・導入支援）まで幅広く手がけています。
+                  総合的なサービスを高い品質、納期で提供しお客様より高い信頼を得ています。<br/>
+                  <br/>
+                  &nbsp;&nbsp;開発に当たっては言語やフレームワーク、ベンダーの種類にもこだわらず、お客様のニーズに柔軟に対応して、
+                  コストパッケージに優れた高品質なアプリケーションを実現します。また、技術革新にもいち早く対応し常にお客様のニーズに応えるべく取り組みを行っています。<br/>
+                  <br/>
+                  &nbsp;&nbsp;開発実績としては、受発注システムなどの業務システムをはじめ、Web系システム、通信系システムなどがあり、
+                  多方面のお客様にご満足をいただいています。今までの開発経験で培った技術力のみならず、業種向けアプリケーションの開発を通じて蓄積した業務知識を生かして、
+                  お客様の業界特有の業務処理に対応できるのが、ウイズ・ワンのアプリケーション開発の特色となっています。<br/>
+                  <br/>
+                </p>
+                <li>開発手法</li>
+                <p>
+                  弊社は、スパイラル開発／ウォーターフォール開発などの開発手法を問わず開発現場の特性に合う、様々なプロジェクトに参画しています。<br>
+                  また、作業工程においては要求分析～保守運用に至るまで、全ての開発工程に対応が可能です。<br>
+                  <font size="1">&nbsp;&nbsp;※ウォーターフォール形：システム全体の要求を一度にヒアリングし、設計・実装・検証までの工程を順次完結させる方式。</font><br>
+                  <font size="1">&nbsp;&nbsp;※スパイラル形：反復型の開発として、機能を徐々に積み上げていく方式。</font><br>
+                </p>
+                <br/>
+                <li>保有スキル／開発可能分野</li>
+                  <table class="ta1 mb1em">
+                    <tr>
+                        <th>ハードウェア</th>
+                        <td>【汎用機】富士通、日立製作所、日本電気、ＩＢＭ、その他<br>
+                            【オープン系】ＰＣ、ＵＮＩＸ等の各種マシン
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>ＯＳ</th>
+                        <td>UNIX（solaris、HP‐UX、AIX）、Linux、MS（WINDOWS）</td>
+                    </tr>
+                    <tr>
+                        <th>ＤＢ</th>
+                        <td>Oracle、DB２、Symfoware、Sybase、SQLserver、Postgres</td>
+                    </tr>
+                    <tr>
+                        <th>Ｗｅｂ技術</th>
+                        <td>HTML、XML、JSP／Servlet、EJB、Perl、PHP</td>
+                    </tr>
+                    <tr>
+                        <th>言語＆ﾂｰﾙ</th>
+                        <td>C、C++、VC、VB、PL/SQL、Java、ASM PL/I、COBOL、FORTRAN、Delphi、corba</td>
+                    </tr>
+                  </table>
+                  <br/>
+                <li>開発心得</li>
+                <p>納期を厳守いたします。<br>
+                  品質維持に努めます。<br>
+                  お客様とのリレーションを大切にいたします。<br>                  
+                </p>
+                <br/>
+                <li>エンジニア派遣業務</li>
+                <p>&nbsp;&nbsp;セキュリティの確保及び各種法規のコンプライアンスの観点から、お客様先での業務のウェイトが向上しております。<br>
+                  通常の業務請負体制での業務への対応に加えて労働者派遣事業法に基づいたシステムエンジニア、プログラマーの派遣サービスも提供させて頂いております。お客様が必要とされる技術力・能力を持つ人材を、必要なとき、必要な人数、必要な期間、適正価格でお客様先に派遣いたします。<br>
+                  （派遣認可番号：特13-304285) 
+                </p>
+                </section>
+
+                <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+                <h3 id="event2">■取引先</h3>
+                <br/>
+                <table class="sheet_noborder" width="650">
+                  <tr>
+                    <td>富士通株式会社</td>
+                    <td>（http://jp.fujitsu.com/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社富士通ｱﾄﾞﾊﾞﾝｽﾄｿﾘｭｰｼｮﾝｽﾞ</td>
+                    <td>（http://jp.fujitsu.com/group/fasol/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社富士通ビー・エス・シー</td>
+                    <td>（http://www.bsc.fujitsu.com/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社富士通九州システムズ</td>
+                    <td>（http://jp.fujitsu.com/group/kyushu/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社富士通ﾐｯｼｮﾝｸﾘﾃｨｶﾙｼｽﾃﾑｽﾞ</td>
+                    <td>（http://jp.fujitsu.com/group/fmcs/）</td>
+                  </tr>
+                  <tr>
+                    <td>明治安田生命保険相互会社</td>
+                    <td>（http://www.meijiyasuda.co.jp/profile/）</td>
+                  </tr>
+                  <tr>
+                    <td>明治安田システムテクノロジー株式会社</td>
+                    <td>（http://www.mytecno.com/）</td>
+                  </tr>
+                  <tr>
+                    <td>横河情報システムズ株式会社</td>
+                    <td>（http://www.yokogawa.com/jp-yic/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社さくらケーシーエス</td>
+                    <td>（http://www.kcs.co.jp/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社AOFジャパン</td>
+                    <td>（http://www.aof-imaging.com/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社SMSデータテック</td>
+                    <td>（http://www.sms-datatech.co.jp/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社越虎</td>
+                    <td>（http://www.echitora.co.jp/）</td>
+                  </tr>
+                  <tr>
+                    <td>光文書院株式会社</td>
+                    <td>（http://www.kobun.co.jp/）</td>
+                  </tr>
+                  <tr>
+                    <td>株式会社築地寿司清</td>
+                    <td>（http://www.tsukijisushisay.co.jp/）</td>
+                  </tr>
+                </table>
+                <br/>
+                <li>仕入先</li>
+                <table class="sheet_noborder" width="650">
+                    <tr>
+                      <td>浅野商事株式会社</td>
+                      <td>（http://www.asano-net.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社住商リース</td>
+                      <td>（http://www.scl.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>ドットウェルビーエムエス株式会社</td>
+                      <td>（http://www.dodwellbms.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>日本オセ株式会社</td>
+                      <td>（http://www.ocejapan.co.jp/）</td>
+                    </tr>
+                </table>
+                <br />
+                <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+                <h3 id="event3">■開発実績</h3>
+                    <br />
+                    <table class="ta1 mb1em">
+                      <li>Webシステム</Li>
+                        <th>ユーザ</th>
+                        <th>業務</th>
+                        <th>内容</th>
+                        <th>ＯＳ/ＤＢ</th>
+                        <th>言語</th>
+                        <th>ツール/手法</th>
+                      <tr>
+                        <td>携帯電話会社</td>
+                        <td>音楽配信システム</td>
+                        <td>会員向け音楽視聴スマホアプリ開発</td>
+                        <td>Windows,<br/>
+                        Android,<br/>
+                        IOS
+                        </td>
+                        <td>PHP</td>
+                        <td>Tomcat</td>
+                      <tr>
+                        <td>証券会社</td>
+                        <td>証券基幹システム</td>
+                        <td>NISA制度<br/>
+                            トータルリターン通知制度導入
+                        </td>
+                        <td>Linux/DB2</td>
+                        <td>Java/JSP/Servlet/<br/>
+                            Seasar2/jQuery/<br/>
+                            Bootstrap
+                        </td>
+                        <td>Tomcat<br/>
+                            JP1
+                        </td>
+                    </table>
+                    <br />
+                    <br />
+                <h3 id="event4">■海外事業展開</h3>
+                    <br />
+                    <p>
+                    株式会社ウイズ・ワンは、2004年5月にWEB版グループウェアの開発に着手しました。<br/>
+                    ビジネスモデルとして、オフショア開発を導入し、ネパール王国・カトマンズ市内のシステムインテグレータであるWEB PARK NEPAL社に発注しました。<br/>
+                    <br/>
+                    昨今ネパールでは、近隣のインドの影響もあり、ITが先端技術の産業として注目されています。<br/>
+                    ウイズ・ワンは、ネパールの優秀なスタッフ達と綿密な連絡を取りつつ、オフショア開発を行い、2004年9月にWEB版グループウェア「Sea Birds（シーバーズ）V1.0」を完成しました。また、2004年12月には、改良版である「Sea Birds（シーバーズ）V2.0」を製品化し、同時にネパール王国に現地法人を設立しました。（2005年1月）<br/>
+                    <br/>
+                    2006年11月、タイに現地法人「WISS 1(THAI)」を設立し、在タイ日系企業様向けのシステム開発に、着手して参りたいと考えております。
+                    </p>
+            </section>
+
+            <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+            <section>
+                <h2 id="soft">ソフトウェア技術本部</h2>
+                <h3 id="soft1">■SIソリューション事業部</h3>
+                    <br />
+                    <br />
+                    <br />
+                <h3 id="soft2">■先端テクノロジー事業部</h3>
+                    <br />
+                    <br />
+                    <br />
+                <h3 id="soft3">■インフラ事業部</h3>
+            </section>
+
+        </section>
+    </div><!--/main-->
+    </div><!--/contents in-->
+
+    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+    </div><!--/contents-->
+
+</div><!--/container-->
+
+<footer>
+    <small>Copyright &copy; WISS1, Inc. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>

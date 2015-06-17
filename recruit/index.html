@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>WISS1 RECURUT 2016</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- レスポンシブを無効にする
+<link href="css/style-s.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" type="text/css">
+<link href="css/style-m.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)" type="text/css">-->
+<link href="css/jquery.fs.boxer.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+<script type="text/javascript" src="js/wiss1.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+  setInterval("slideSwitch()", 4000);
+
+  $('#menubar li').hover(function() {
+      $("ul:not(:animated)", this).slideDown();
+  }, function() {
+      $("ul.child",this).slideUp();
+  });
+
+  $('.boxer').boxer();
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+     // スクロールの速度
+     var speed = 1000; // ミリ秒
+     // アンカーの値取得
+     var href= $(this).attr("href");
+     // 移動先を取得
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     // 移動先を数値で取得
+     var position = target.offset().top;
+     // スムーススクロール
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<!--<h1><a href="../index.html">ホーム</a></h1>-->  
+
+<div id="container">
+    <header>
+    <br />
+    <br />
+        <h1>WISS1 RECRUITING NAVI 2016
+            <a href="../index.html"><img src="images/wiss1logo.jpg" width="100" height="90" style="float:right"></a>
+            <img src="images/cara.jpg" width="180" height="90" style="float:right">
+        </h1>
+        <br>
+    </header>
+
+    <nav id="menu">
+        <ul id="menubar">
+            <li><a href="#interview">社員インタビュー<span>INTERVIEW</span></a>
+                <ul class="child">
+                    <li><a href="#personal">パーソナルボイス<span>PERSONAL VOICE</span></a></li>
+                    <li><a href="#group">グループトーク<span>GROUP TALK</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#event">社内イベント<span>EVENT</span></a>
+                <ul class="child">
+                    <li><a href="#event1">平成27年度<span>2015 EVENT</span></a></li>
+                    <li><a href="#event2">平成26年度<span>2014 EVENT</span></a></li>
+                    <li><a href="#event3">平成25年度<span>2013 EVENT</span></a></li>
+                    <li><a href="#event4">平成24年度<span>2012 EVENT</span></a></li>
+                    <li><a href="#event5">平成23年度<span>2011 EVENT</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#carrier">人財育成<span>CARRIER</span></a>
+                <ul class="child">
+                    <li><a href="#training">新入社員育成研修<span>NEW EMPLOYEES TRAINING</span></a></li>
+                    <li><a href="#technical">技術研修<span>TECHNICAL TRAINING</span></a></li>
+                    <li><a href="#management">目標管理<span>MANAGEMENT BY OBJECTIVES</span></a></li>
+                </ul>
+            </li>
+            <li><a href="#recruit">募集要項<span>RECRUIT</span></a>
+            </li>
+        </ul>
+    </nav>
+    <br />
+
+    <div id="slideshow">
+        <img src="images/1.jpg" alt="Image 1" class="active" width="997" height="295" />
+        <img src="images/2.jpg" alt="Image 2" width="997" height="295" />
+        <img src="images/3.jpg" alt="Image 3" width="997" height="295" />
+    </div>
+
+    <div id="contents">
+    <div id="contents-in">
+    <div id="main">
+        <section>
+            <section>
+                <h2 id="interview">社員インタビュー</h2>
+                <section>
+                    <h3 id="personal">■パーソナルボイス</h3>
+                    <p>最前線で活躍するプロフェッショナルの皆さんから、これからIT業界を目指す皆さんへ向けて、それぞれの想いを語っていただきました。</p>
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>鈴木貴之　SIソリューション事業部　課長代理</h4>
+                            <a href="#personal1" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice01_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice02.JPG" class="boxer" data-gallery=""><img src="images/voice02_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal1" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice01.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 270px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="230">
+                                   </div>
+                                   <span style="position: absolute; top: 270px; left: 27px; width: 750px;">
+                                      <font color="#000000">SE業界で当たり前のように使っているバックアップアプリケーションの開発とデザイン作成を志願し担当していました。ただ使うのとアプリケーションを開発するとでは考え方がまったく違い、お客様の要望を元に要件・設計の作成、工程毎のスケジュール作成と、私の経験が浅かったこともあり、作業に時間がかかってしまったり、チーム全体の意識の疎通が出来ていなかったりと多くのことで苦しみました。しかし、チーム全体が一丸となって作業に励み、徐々に開発しているアプリケーションが形になるにつれ、苦しかったことより、リリースしたい期待感が生まれてきました。ウイズ・ワンの先輩や後輩と一緒にリリースを無事に終えたことの達成感が今でも忘れられません。今でもリリースした時の達成感や仕事のやり甲斐を感じながら日々精進しています。自分のやりたいことを率先して行わせてくれるウイズ・ワンで日々成長を続けていきたいですね。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:115px;"></td>
+                        <td>
+                            <h4>大嶋克也　先端テクノロジー事業部　課長代理</h4>
+                            <a href="#personal2" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice03_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice04.JPG" class="boxer" data-gallery=""><img src="images/voice04_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal2" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice03.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 320px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="180">
+                                   </div>
+                                   <span style="position: absolute; top: 320px; left: 27px; width: 750px;">
+                                      <font color="#000000">私が入社して最初に携わったプロジェクトは大規模な業務システムの開発でした。既存のプログラムの改修という比較的簡単な作業の担当でしたが、「仕事」である以上、求められるレベルは学生時代とは大違いで苦労したのを覚えています。それもウイズ・ワンの先輩達の助けがあって何とか乗り切ることができ、開発したシステムが実際に稼働したときは、大きな達成感や自信を得ることができました。今では設計も担当できるようになり、システムにより深く関われるようになりました。自分が技術を習得すれば、それだけ任せてもらえる仕事の範囲が広がるのが、この仕事のやりがいだと思います。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br />
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>菊池俊輝　SIソリューション事業部　主任</h4>
+                            <a href="#personal3" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice05_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice06.JPG" class="boxer" data-gallery=""><img src="images/voice06_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal3" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice05.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 350px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="150">
+                                   </div>
+                                   <span style="position: absolute; top: 350px; left: 27px; width: 750px;">
+                                      <font color="#000000">ホームページ制作を担当した菊池です。入社当時から会社のホームページのデザインを一新したいと思っていました。企業情報やマーケティングプラン、企業ホームページの「役割」は非常に重要です。正直、やりたいと思っているだけで自らデザインするチャンスなどないと思っていましたが、ウイズ・ワンという会社は「やりたい」という人にはチャンスをくれます。ほとんど未経験からの制作でしたが、アイディアを出しあい、泊まり込みの合宿で仲間と共に制作する時間はとても貴重な経験でした。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:115px;"></td>
+                        <td>
+                            <h4>五十嵐圭　インフラ事業部　主任</h4>
+                            <a href="#personal4" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice07_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice08.JPG" class="boxer" data-gallery=""><img src="images/voice08_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal4" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice07.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 250px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="250">
+                                   </div>
+                                   <span style="position: absolute; top: 250px; left: 27px; width: 750px;">
+                                      <font color="#000000">社員のスキルアップを目的として、当社では技術研修を行っています。研修の分野は様々で、プログラミング分野ならJavaやObjective-C等、インフラ分野ならサーバ・ネットワーク機器や各種製品OS等を取り扱っており（*1）、自身で必要だったり、興味がある分野を学ぶ事ができます。講義型の研修もありますが、実習型の研修が多いのでただ学ぶだけではなく、研修内の成果物が社内アプリ・インフラとして利用されます。ファイルサーバ、Android・iOSアプリ、オリジナルのWebサービス等、様々です。苦労して作成した成果物が実際に利用されることに、やりがいを覚える社員も多いです。当社にエンジニアとして入社する方々は、何かしらの技術研修に参画することになります。自分の力を伸ばし、どのようなエンジニアになるかは皆さんの選択次第ですが、当社では技術研修という形で皆さんの技術的サポートを行っています。自分を磨き、なりたい理想を叶えてください。（※1 研修の内容は、その時々の業界のトレンドや講師の都合によって変わります。）
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br />
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>西島啓太　インフラ事業部　主任</h4>
+                            <a href="#personal5" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice09_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice10.JPG" class="boxer" data-gallery=""><img src="images/voice10_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal5" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice09.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 290px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="210">
+                                   </div>
+                                   <span style="position: absolute; top: 290px; left: 27px; width: 750px;">
+                                      <font color="#000000">インフラエンジニアには、幅広い知識と技術が必要です。また、日々新しい技術が生み出されています。その中から何を優先して学び、経験していくかが重要だと思います。当社では、「何をしたいか」・「どのようになりたいか」といったキャリアパスを汲み取ってくれます。私は入社して、4年目になりますが、始めはインフラエンジニアとしての知識や技術は、ゼロに等しい状態でした。当然かもしれませんが、自信がなくインフラエンジニアとしてこの先仕事をしていくことができるか不安でした。そこから、少しずつ経験を重ねて、3年目には、全国規模の大きなプロジェクトに参画させて頂けました。この経験を経て、インフラエンジニアとしての自信を身に付けることができました。今後は、現場のチームリーダを任せて頂けるように尽力していきたいと考えています。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:115px;"></td>
+                        <td>
+                            <h4>宮嶋洸太郎　先端テクノロジー事業部　主任</h4>
+                            <a href="#personal6" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice11_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice12.JPG" class="boxer" data-gallery=""><img src="images/voice12_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal6" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice11.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 300px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="200">
+                                   </div>
+                                   <span style="position: absolute; top: 300px; left: 27px; width: 750px;">
+                                      <font color="#000000">今私は、上司と一緒にお客様が使用しているシステムの再構築プロジェクトに参画し、基本設計書作成という作業に携わっています。『IT業界＝プログラミング』というイメージが強いのではないかと思われますが、基本設計書がないとプログラミングはできませんし、お客様の要望を反映するための重要な作業だと思っています。このプロジェクトに参画するまではほぼ未経験だったので、何度も設計書の作成方法を間違えて現場の方に注意されたり、現行のプログラムを読み間違えて誤った設計書をするなど失敗続きでした。ですが、分からない事・不安なこと・設計する際に意識すること等を一緒に参画している先輩に聞いたり教えてもらうことができたので、少しずつですが仕事のやりがいや、意識というものが変わってきているように日々感じています。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br />
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>武井竜一　インフラ事業部　平成26年度入社</h4>
+                            <a href="#personal7" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice13_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice14.JPG" class="boxer" data-gallery=""><img src="images/voice14_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal7" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice13.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 410px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="90">
+                                   </div>
+                                   <span style="position: absolute; top: 410px; left: 27px; width: 750px;">
+                                      <font color="#000000">入社当初から感じていましたが、ウイズ・ワンは人、特に縦の繋がりに壁のない会社です。仕事での相談は勿論、仕事以外の場面でも気軽に会話ができ、時には趣味の合った先輩と遊びに出掛けることもあります。こうしたフランクで風通しの良い雰囲気は他の会社には無いものであり、私自身とても働きやすいと感じています。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:115px;"></td>
+                        <td>
+                            <h4>Ｍ・Ｉ　SIソリューション事業部　平成26年度入社</h4>
+                            <a href="#personal8" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice15_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice16.JPG" class="boxer" data-gallery=""><img src="images/voice16_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal8" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice15.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 390px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="110">
+                                   </div>
+                                   <span style="position: absolute; top: 390px; left: 27px; width: 750px;">
+                                      <font color="#000000">2年目のMIです。ウイズ・ワンに入社して良かったことは社員の方とコミュニケージョンを取る機会が多い点です。当社では月に一度は研修があり、私はJava研修を受けています。研修は現場が違う先輩方がどう作業しているかを見れる場、質問できる場なので、大変よい機会です。研修が終わった後はみんなで食事をしながら交流を深めています。先輩たちはいい人、面白い人ばかりでとても楽しいです！
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <br />
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>小椋雄太　SIソリューション事業部　平成26年度入社</h4>
+                            <a href="#personal9" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice17_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice18.JPG" class="boxer" data-gallery=""><img src="images/voice18_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal9" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice17.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 320px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="180">
+                                   </div>
+                                   <span style="position: absolute; top: 320px; left: 27px; width: 750px;">
+                                      <font color="#000000">ウイズ・ワンに入社して良かったことは、初めてのプロジェクトから上流工程と呼ばれる部分を経験できている事です。その分大変なこともあったりもします。初めてだから日々新しい事を覚えたり、慣れない満員電車に乗ったりとか...(笑)。でも、若い内からこんなにチャレンジさせてもらえるなんて今では本当にいい経験になっています。また、上司と部下の仲も良くSIソリューション事業部で月1回行われる事業部会では、仕事終わりに集まりダーツや卓球、ボーリング、飲み会など一緒に楽しんだりもします。今はまだ駆け出しで周りに迷惑をかけることがあるけれど、経験と技術スキルを身に付けいつかは周りを引っ張りWISS1を大きくしていきたいと思える！そんな会社です！！！
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="width:115px;"></td>
+                        <td>
+                            <h4>三上亮　野球部　キャプテン</h4>
+                            <a href="#personal10" class="boxer" data-boxer-width="800" data-boxer-height="500"><img src="images/voice19_thumb.JPG" width="168" height="112"></a>
+                            <a href="images/voice20.JPG" class="boxer" data-gallery=""><img src="images/voice20_thumb.JPG" width="168" height="112"></a>
+                            <div id="personal10" style="display:none;">
+                                <div>
+                                <p style="position: relative;">
+                                   <img src="images/voice19.JPG" width="800" height="533" alt="" />
+                                   <div style="position:absolute; top : 410px ;">
+                                     <IMG src="images/plate.jpg" width="800" height="90">
+                                   </div>
+                                   <span style="position: absolute; top: 410px; left: 27px; width: 750px;">
+                                      <font color="#000000">野球部キャプテンの三上です。ウイズ・ワン野球部は平成22年に創部しました。神奈川県情報サービス産業協会の軟式野球大会に参加し、仕事とのメリハリをつけ日々活動しています。部員の半分以上が未経験者ではありますが、普段の業務を忘れ、部署、役職に関係なく「楽しく・強い」野球を目指しています。
+                                   </span>
+                                </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </section>
+
+                <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+                <section>
+                    <h3 id="group">■グループトーク</h3>
+                    <p>集まったのは、仕事にプライベートに、充実した毎日を過ごしている精鋭4人。<br />ウイズ・ワンで活躍中の皆さんに、ざっくばらんに語っていただきました。</p>
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>幸隆志　インフラ事業部　事業部長</h4><h5>慶應義塾大学　経済学部卒業　（写真右端）</h5><br />
+                            <h4>江上達郎　SIソリューション事業部　主任</h4><h5>早稲田大学　人間科学部卒業　（写真左端）</h5><br />
+                        </td>
+                        <td style="width:105px;"></td>
+                        <td>
+                            <h4>大嶋克也　先端テクノロジー事業部　課長代理</h4><h5>筑波大学 大学院 システム情報工学研究科卒業　（写真中右）</h5><br />
+                            <h4>荒木龍一郎　平成27年度入社　1年目社員</h4><h5>山口大学　理学部卒業　（写真中左）</h5><br />
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                    <img src="images/group_talk.JPG" width="997" height="295" />
+                    <p>
+                        荒木「僕は学生の時にプログラミングが未経験なのですが、こんな私でもやっていけるのでしょうか。」<br />
+                        幸　「私も未経験だったよ。確かに最初は人より勉強しなければならないし、苦労もしたけど、やる気次第じゃないかな。」<br />
+                        大嶋「自分も、学生時代はロボットのプログラミングをしていたけど、仕事で作るプログラムとは違うから、現場で覚える！（笑）」<br />
+                        荒木「なるほど…。IT業界って、過酷なイメージがありますが、その点も不安です。」<br />
+                        江上「確かに、ピーク時は労働時間が高くなることもあるんやけど、落ち着いてる時は毎日定時上がりやで。」<br />
+                        大嶋「作業の生産性は、工夫次第で改善できるし、そういう意味でもやり甲斐があるよ。」<br />
+                        幸　「先輩や上司が、プロジェクトの管理や作業のフォローをしたり、一丸となって助け合うのもウイズ・ワンの強みかな。」<br />
+                        荒木「少し安心しました。これから頑張りますので、宜しくお願いします！」<br />
+                        江上「あまりかしこまらんと、プライベートの息抜きもほんま必要やで。」<br />
+                    </p>
+                </section>
+            </section>
+
+            <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+            <section>
+                <h2 id="event">社内イベント</h2>
+                <h3 id="event1">■平成27年度　新入社員歓迎会</h3>
+                <p>5月某日、フレッシュな新入社員を熱烈に歓迎すべく、クルーザーを貸し切り、東京湾を周遊してきました。<br />
+                    <a href="images/2015_new_comer_party.JPG" title="平成27年度　新入社員歓迎会" class="boxer" data-gallery="gallery1"><img src="images/2015_new_comer_party_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成26年度　お花見</h3>
+                <p>桜の季節、代々木公園にてお花見イベントを実施しました。天候にも恵まれ、楽しい宴会となりました。もちろん最後にはキチンと後片付けも。<br />
+                    <a href="images/2014_hanami.JPG" title="平成26年度　お花見" class="boxer" data-gallery="gallery1"><img src="images/2014_hanami_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3 id="event2">■平成26年度　タイ社員旅行</h3>
+                <p>約2年に1度の頻度で実施される社員旅行です。今回はタイ王国です！バンコクを観光し、パタヤでリゾート気分を味わいました。最高！！<br />
+                    <a href="images/2014_thai_01.JPG" title="平成26年度　タイ社員旅行" class="boxer" data-gallery="gallery1"><img src="images/2014_thai_01_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/2014_thai_02.JPG" title="平成26年度　タイ社員旅行" class="boxer" data-gallery="gallery1"><img src="images/2014_thai_02_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3 id="event3">■平成25年度　新入社員歓迎会</h3>
+                <p>6月某日、隅田川の穏やかな流れに揺られながら、屋形船で新入社員の歓迎会を実施しました。新鮮な刺身や旬の食材を使った天ぷらが美味でした。<br />
+                    <a href="images/2013_new_comer_party.JPG" title="平成25年度　新入社員歓迎会" class="boxer" data-gallery="gallery1"><img src="images/2013_new_comer_party_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成25年度　上海視察</h3>
+                <p>過去にもネパール、タイ、ベトナム、フィリピン、バングラデシュ、中国（大連）を視察していますが、今回は中国（上海）への視察です。現地のIT関連会社を数社訪問しました。技術レベルが高いことや言語の壁があったこと、または国民性や文化等を学び、非常に良い経験になりました。<br />
+                    <a href="images/2013_shanghai_01.JPG" title="平成25年度　上海視察" class="boxer" data-gallery="gallery1"><img src="images/2013_shanghai_01_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/2013_shanghai_02.JPG" title="平成25年度　上海視察" class="boxer" data-gallery="gallery1"><img src="images/2013_shanghai_02_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成25年度　忘年会</h3>
+                <p>毎年恒例の忘年会です。前半の第一部は大真面目に報告や発表を行い、後半の第二部は大笑いに包まれました。このギャップがウイズ・ワンの楽しいところです！<br />
+                    <a href="images/2013_party_01.JPG" title="平成25年度　忘年会" class="boxer" data-gallery="gallery1"><img src="images/2013_party_01_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/2013_party_02.JPG" title="平成25年度　忘年会" class="boxer" data-gallery="gallery1"><img src="images/2013_party_02_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3 id="event4">■平成24年度　新入社員歓迎会</h3>
+                <p>新入社員を迎え、はとバスのツアーで浅草や東京タワー等のベタな（！？）都内観光を行いました。<br />
+                    <a href="images/2012_new_comer_party.JPG" title="平成24年度　新入社員歓迎会" class="boxer" data-gallery="gallery1"><img src="images/2012_new_comer_party_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成24年度　防災体験学習施設「そなエリア東京」</h3>
+                <p>前年に起きた東日本大震災を教訓に、防災に対する意識を高めようと体験学習に行ってきました。<br />
+                    <a href="images/2012_bousai.JPG" title="平成24年度　防災体験学習施設「そなエリア東京」" class="boxer" data-gallery="gallery1"><img src="images/2012_bousai_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成24年度　忘年会</h3>
+                <p>ラフレさいたまにて、大忘年会を実施しました。芸は身を助ける（？）なのか、ウイズ・ワンには芸達者が多いです（笑）<br />
+                    <a href="images/2012_party_01.JPG" title="平成24年度　忘年会" class="boxer" data-gallery="gallery1"><img src="images/2012_party_01_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/2012_party_02.JPG" title="平成24年度　忘年会" class="boxer" data-gallery="gallery1"><img src="images/2012_party_02_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3 id="event5">■平成23年度　新入社員歓迎会</h3>
+                <p>元気な新入社員を歓迎するために、東京湾でクルージングしました。<br />
+                    <a href="images/2011_new_comer_party.JPG" title="平成23年度　新入社員歓迎会" class="boxer" data-gallery="gallery1"><img src="images/2011_new_comer_party_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3>■平成23年度　バリ社員旅行</h3>
+                <p>年の瀬に社員旅行を実施しました。忘年会をバリ島でやるなんて、ウイズ・ワンならではです！<br />
+                    <a href="images/2011_bali_01.JPG" title="平成23年度　バリ社員旅行" class="boxer" data-gallery="gallery1"><img src="images/2011_bali_01_thumb.JPG" width="168" height="112"></a>
+                </p>
+            </section>
+
+            <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+            <section>
+                <h2 id="carrier">人財育成</h2>
+                <h3 id="training">■新入社員育成研修</h3>
+                <p>入社から2ヶ月間は、社内での研修を実施しています。研修の内容は、主にビジネスマナー、情報システムの基礎、プログラミングの3つです。研修後は、事業部に配属となり、現場プロジェクトへの参画となります。<br />
+                    <a href="images/training01.JPG" title="研修の様子" class="boxer" data-gallery="gallery2"><img src="images/training01_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/training02.JPG" title="研修の様子" class="boxer" data-gallery="gallery2"><img src="images/training02_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <h3 id="technical">技術研修</h3>
+                <p>先輩や上司たちによるスキルアップのための技術研修を、6つのカテゴリに分けて実施しています。<br />
+                    <a href="images/training03.JPG" title="研修の様子" class="boxer" data-gallery="gallery2"><img src="images/training03_thumb.JPG" width="168" height="112"></a>
+                    <a href="images/training04.JPG" title="研修の様子" class="boxer" data-gallery="gallery2"><img src="images/training04_thumb.JPG" width="168" height="112"></a>
+                </p>
+                <ul>
+                    <li>　・PHP研修</li>
+                    <p>　　CakePHPを使い、Webシステムを構築しながら、PHP言語を学びます。</p>
+                    <li>　・Java研修</li>
+                    <p>　　比較的新しいJavaフレームワークのPlayFrameworkを使い、Webシステムを構築しながら、JavaとMVCを学びます。</p>
+                    <li>　・Andoroid研修</li>
+                    <p>　　Androidアプリを作成しながら、Andoridプログラミングを学びます。</p>
+                    <li>　・iOS研修</li>
+                    <p>　　iOSアプリを作成しながら、Objective-CやSwiftを学びます。</p>
+                    <li>　・インフラ研修</li>
+                    <p>　　サーバー及びネットワークの設計／構築を行いながら、各種OSやミドルウェアの特性を学びます。</p>
+                    <li>　・データベース研修</li>
+                    <p>　　PostgreSQLを使い、講義と実践を織り交ぜながら、データベースについて学びます。</p>
+                </ul><br />
+                <h3 id="management">■目標管理</h3>
+                    <table cellpadding="10" cellspacing="10">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>成長の計画とチャレンジ精神</h4>
+                            <p>社員の能力開発及び職業人としての自己実現を支援する制度として、目標管理というものを実施しています。まず、配属先の上司と共に、3年間のキャリアプランを作成します。キャリアプランを基に、半期ごとにチャレンジする目標を設定します。本人の努力だけでなく、上司や先輩の支援があり、目標を達成していくことによって、一段上のエンジニアへと成長していきます。</p>
+                            <table border="0">
+                              <tr>
+                               <td align="0"><img src="images/carrierplan_01.jpg" width="400" height="400"></td>
+                               <td width="170"></td> 
+                               <td width="0"><img src="images/carrierplan_02.jpg" width="400" height="400"></td>
+                              </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                    </table>
+            </section>
+
+            <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+            <section>
+                <div id="recruit"></div>
+                <h2>募集要項</h2>
+                <br>
+                <table class="ta1 mb1em">
+                    <caption>新卒採用／中途採用</caption>
+                    <tr>
+                        <th>募集職種</th>
+                        <td>システムエンジニア、プログラマー、オペレーター</td>
+                    </tr>
+                    <tr>
+                        <th>処遇</th>
+                        <td>給与 経験・能力を考慮し、決定します。</td>
+                    </tr>
+                    <tr>
+                        <th>賞与</th>
+                        <td>年2回（6月、12月）</td>
+                    </tr>
+                    <tr>
+                        <th>諸手当</th>
+                        <td>通勤手当(交通費全額支給)／時間外手当／家族手当／住宅手当／技術手当 他</td>
+                    </tr>
+                    <tr>
+                        <th>勤務時間</th>
+                        <td>標準労働時間帯9:00～18:00。本社勤務時はフレックスタイム制適用。</td>
+                    </tr>
+                    <tr>
+                        <th>休日休暇</th>
+                        <td>完全週休2日制(土・日)、祝日、国民の休日、年末年始、特別休日、年次有給休暇　　他</td>
+                    </tr>
+                    <tr>
+                        <th>社会保険</th>
+						            <td>健康保険組合／厚生年金／労働保険(労災・雇用)／養老保険(ニッセイみらいのかたち)／団体総合生活補償保険(レクリエーション保険)／
+                            特別退職金共済制度／情報サービス企業年金基金(確定給付型年金)／確定拠出年金(401K)／
+                            独立行政法人勤労者退職金共済機構中小企業退職金共済<br />
+                               <img src="images/hukuri.jpg" width="500" height="500">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>各種制度</th>
+                        <td>慶弔見舞金制度／財産形成貯蓄預金制度(住宅、年金)／退職金制度／親睦会／旅行会</td>
+                    </tr>
+                    <tr>
+                        <th>応募方法</th>
+                        <td>
+                          郵送で応募：履歴書（写真貼付、希望職種明記）と職務経歴書（書式自由）及び「採用応募者の個人情報の取扱いについて」の同意書を下記問合せ先住所までご郵送ください。<br />
+                          　〒103-0011　東京都中央区日本橋大伝馬町3番3号日本橋大伝馬町ビル<br />
+                          E-mailで応募：履歴書（希望職種明記）と職務経歴書（書式自由）及び「採用応募者の個人情報の取扱いについて」の同意書を添付ファイルとして、下記問合せ先E-mailアドレス宛てに送信してください。<br />
+                          　<a href="mailto:info@wiss1.co.jp">info@wiss1.co.jp</a><br />
+                          応募の秘密は厳守致します。また、応募書類については返却いたしませんので、あらかじめご了承願います。<br />
+                          下記より、「採用応募者の個人情報の取扱いについて」をダウンロードできます。<br />
+                          内容を確認し同意の上、日付と著名の記入お願いします。<br />
+                          採用情報の取扱いについて　<a href="doc/ConsentForm.doc"><font size="2">WORD</font></a>　<a href="doc/ConsentForm.pdf"><font size="2">PDF</font></a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+    </div><!--/main-->
+    </div><!--/contents in-->
+
+    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+    </div><!--/contents-->
+
+</div><!--/container-->
+
+<footer>
+    <small>Copyright &copy; WISS1, Inc. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>
