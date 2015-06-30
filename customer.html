@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>株式会社ウイズ・ワン</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- レスポンシブを無効にする
+<link href="css/style-s.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" type="text/css">
+<link href="css/style-m.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)" type="text/css">-->
+<link href="css/jquery.fs.boxer.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+<script type="text/javascript" src="js/wiss1.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+  setInterval("slideSwitch()", 4000);
+
+  //メニューバーにマウスポインタを置いた時の処理
+  $('#menubar li').hover(function() {
+      //置いた場合
+      $("ul:not(:animated)", this).slideDown();
+  }, function() {
+      //離した場合
+      $("ul.child",this).slideUp();
+  });
+
+  $('.boxer').boxer();
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+     // スクロールの速度
+     var speed = 1000; // ミリ秒
+     // アンカーの値取得
+     var href= $(this).attr("href");
+     // 移動先を取得
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     // 移動先を数値で取得
+     var position = target.offset().top;
+     // スムーススクロール
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<div id="container">
+    <header>
+    <br />
+          <h5><p><a href="" style="float:right;">▷︎個人情報保護方針</a></p></h5>
+          <h5><p><a href="mailto:info@wiss1.co.jp" style="float:right;">▷︎お問い合わせ</a></p></h5>
+    <br />
+          <a href="./index.html"><img src="images/home_Logo.jpg" width="180" height="54" style="float:left"></a>
+          <nav id="menu">
+              <ul id="menubar">
+                  <li><a href="">会社情報<span>Corporate Information</span></a>
+                      <ul class="child">
+                          <li><a href="./company.html">会社概要<span>Company Overview</span></a></li>
+                          <li><a href="./orga.html">組織構成<span>Organization</span></a></li>
+                          <li><a href="./current.html">役員<span>Directors</span></a></li>
+                          <li><a href="./access.html">アクセス<span>Access</span></a>
+                      </ul>
+                  </li>
+                  <li><a href="">事業案内<span>Business Guide</span></a>
+                      <ul class="child">
+                          <li><a href="./business.html">事業内容<span>Business</span></a></li>
+                          <li><a href="./customer.html">取引先<span>Customer</span></a></li>
+                          <li><a href="./service.html">開発実績<span>Achievements</span></a></li>
+                          <li><a href="./overseas.html">海外事業展開<span>Overseas Deployment</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="">ソフトウェア技術本部<span>Software</span></a>
+                      <ul class="child">
+                          <li><a href="./solution.html">SIソリューション事業部<span>Solution</span></a></li>
+                          <li><a href="./technology.html">先端テクノロジー事業部<span>Technology</span></a></li>
+                          <li><a href="./infra.html">インフラ事業部<span>Infrastructure</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="recruit/index.html" target="_blank">採用情報<span>Recruiting</span></a>
+                  </li>
+              </ul>
+          </nav>
+    </header>
+    <br />
+
+    <div id="contents">
+    <div id="contents-in">
+    <div id="main">
+        <section>
+                <h3 id="customer">取引先</h3>
+                <br/>
+                <table class="sheet_noborder" width="650">
+                    <tr>
+                      <td>富士通株式会社</td>
+                      <td>（http://jp.fujitsu.com/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社富士通ｱﾄﾞﾊﾞﾝｽﾄｿﾘｭｰｼｮﾝｽﾞ</td>
+                      <td>（http://jp.fujitsu.com/group/fasol/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社富士通ビー・エス・シー</td>
+                      <td>（http://www.bsc.fujitsu.com/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社富士通九州システムズ</td>
+                      <td>（http://jp.fujitsu.com/group/kyushu/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社富士通ﾐｯｼｮﾝｸﾘﾃｨｶﾙｼｽﾃﾑｽﾞ</td>
+                      <td>（http://jp.fujitsu.com/group/fmcs/）</td>
+                    </tr>
+                    <tr>
+                      <td>明治安田生命保険相互会社</td>
+                      <td>（http://www.meijiyasuda.co.jp/profile/）</td>
+                    </tr>
+                    <tr>
+                      <td>明治安田システムテクノロジー株式会社</td>
+                      <td>（http://www.mytecno.com/）</td>
+                    </tr>
+                    <tr>
+                      <td>横河情報システムズ株式会社</td>
+                      <td>（http://www.yokogawa.com/jp-yic/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社さくらケーシーエス</td>
+                      <td>（http://www.kcs.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社AOFジャパン</td>
+                      <td>（http://www.aof-imaging.com/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社SMSデータテック</td>
+                      <td>（http://www.sms-datatech.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社越虎</td>
+                      <td>（http://www.echitora.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>光文書院株式会社</td>
+                      <td>（http://www.kobun.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社築地寿司清</td>
+                      <td>（http://www.tsukijisushisay.co.jp/）</td>
+                    </tr>
+                </table>
+                <br/>
+                <li>仕入先</li>
+                <table class="sheet_noborder" width="650">
+                    <tr>
+                      <td>浅野商事株式会社</td>
+                      <td>（http://www.asano-net.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>株式会社住商リース</td>
+                      <td>（http://www.scl.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>ドットウェルビーエムエス株式会社</td>
+                      <td>（http://www.dodwellbms.co.jp/）</td>
+                    </tr>
+                    <tr>
+                      <td>日本オセ株式会社</td>
+                      <td>（http://www.ocejapan.co.jp/）</td>
+                    </tr>
+                </table>
+        </section>
+    </div><!--/main-->
+    </div><!--/contents in-->
+
+    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+    </div><!--/contents-->
+
+</div><!--/container-->
+
+<footer>
+    <small>Copyright &copy; WISS1, Inc. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>

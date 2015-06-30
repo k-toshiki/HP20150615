@@ -29,16 +29,17 @@ table {
     border-spacing: 0;
 }
 a {
-    color: #666;
+    text-decoration: none;
+    color: #212222;
 }
 a:hover {
-    color: #11233D;
-    text-decoration: none;
+    color: #212222;
+    text-decoration: underline;
 }
 body > h1 {
     font-size: 10px;
     color: #FFF;
-    background: #11233D;
+    background: #212222;
     text-align: right;
 }
 body > h1 a, body > h1 a:hover {
@@ -60,28 +61,29 @@ nav#menu ul {
     font-size: 0;
 }
 nav#menu ul li {
-    /* float: left; */
     display: inline-block;
-    /* width: 248px; */
-    width: 199.4px;
-    /* border-right: 1px solid #dcdcdc; */
+    width: 204px;
     text-align: center;
-    font-weight: bold;
     font-size: 14px;
+    /*透過率
+    filter:alpha(opacity=95);
+    -moz-opacity: 0.95;
+    opacity: 0.95;*/
 }
 nav#menu ul li a {
-    color: #11233D;
+    color: #212222;
     text-decoration: none;
     display: block;
+    height: 54px;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 }
 nav#menu ul li:first-child {
-    /* border-left: 1px solid #dcdcdc; */
+
 }
 nav#menu ul li a:hover {
-    background-color: #11233D;
-    color: #FFF;
+    color: #00BFFF;
+    border-bottom: 3px solid #00BFFF;
 }
 nav#menu ul li a span {
     font-size: 9px;
@@ -91,12 +93,12 @@ nav#menu ul li a span {
     color: #999;
 }
 nav#menu ul li a:hover span {
-    color: #fffbc3;
+    color: #00BFFF;
 }
 nav#menu ul.child {
     background-color: #FFF;
     display: none;
-    width: 199.4px;
+    width: 204px;
     position: absolute;
     z-index: 11;
 }
@@ -122,10 +124,10 @@ body.c2 #main {
     width: 782px;
 }
 #main h2 {
-    background-color: #11233D;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#375A9A), to(#11233D));
-    background-image: -webkit-linear-gradient(#375A9A, #11233D);
-    background-image: linear-gradient(#375A9A, #11233D);
+    background-color: #212222;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#375A9A), to(#212222));
+    background-image: -webkit-linear-gradient(#375A9A, #212222);
+    background-image: linear-gradient(#375A9A, #212222);
     -webkit-box-shadow: 1px 2px 7px #999;
     box-shadow: 1px 2px 7px #999;
     font-size: 100%;
@@ -134,19 +136,23 @@ body.c2 #main {
     clear: both;
 }
 #main h3 {
-    font-size: 100%;
+    font-size: 170%;
+/*    
     background-color: #ececec;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#ececec));
     background-image: -webkit-linear-gradient(#FFF, #ececec);
     background-image: linear-gradient(#FFF, #ececec);
     -webkit-box-shadow: 0px 0px 0px 1px #FFF inset;
     box-shadow: 0px 0px 0px 1px #FFF inset;
+*/    
     padding: 3px 10px 3px 7px;
-    color: #11233D;
+    color: #212222;
+/*
     border-top: 1px solid #cfcfcf;
     border-right: 1px solid #cfcfcf;
-    border-bottom: 1px solid #cfcfcf;
-    border-left: 3px solid #11233D;
+*/    
+    border-bottom: 5px solid #212222;    
+/*    border-left: 3px solid #212222;*/
 }
 #main p {
     padding: 0.5em 10px 1em;
@@ -172,14 +178,14 @@ body.c2 #side {
     background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#FFF));
     background-image: -webkit-linear-gradient(#f2f2f2, #FFF);
     background-image: linear-gradient(#f2f2f2, #FFF);
-    border-top: 3px solid #11233D;
+    border-top: 3px solid #212222;
     border-right: 1px solid #cfcfcf;
     border-bottom: 1px solid #cfcfcf;
     border-left: 1px solid #cfcfcf;
     -webkit-box-shadow: 0px 0px 0px 1px #FFF inset;
     box-shadow: 0px 0px 0px 1px #FFF inset;
     padding: 3px 0px;
-    color: #11233D;
+    color: #212222;
 }
 #sub .box1,
 #side .box1 {
@@ -222,7 +228,7 @@ body.c2 #side {
 }
 #sub ul li a:hover,
 #side ul li a:hover {
-    background-color: #11233D;
+    background-color: #212222;
     color: #FFF;
 }
 footer {
@@ -231,7 +237,7 @@ footer {
     padding-top: 15px;
     padding-bottom: 15px;
     color: #FFF;
-    background: #11233D;
+    background: #212222;
 }
 footer .pr {
     display: block;
@@ -305,7 +311,7 @@ footer a:hover {
     font-size: 100%;
     border-bottom: 1px solid #CCC;
     margin-bottom: 0.5em;
-    color: #11233D;
+    color: #212222;
 }
 #new dl{
     overflow: auto;
@@ -332,7 +338,7 @@ footer a:hover {
     line-height: 2;
 }
 .ta1 td{
-    padding: 10px;
+    padding: 5px;
 }
 .ta1 th{
 /*    width: 140px;
@@ -363,10 +369,10 @@ input[type="button"] {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 30px;
-    background-color: #11233D;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#375A9A), to(#11233D));
-    background-image: -webkit-linear-gradient(#375A9A, #11233D);
-    background-image: linear-gradient(#375A9A, #11233D);
+    background-color: #212222;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#375A9A), to(#212222));
+    background-image: -webkit-linear-gradient(#375A9A, #212222);
+    background-image: linear-gradient(#375A9A, #212222);
     -webkit-box-shadow: 0px 2px 5px #bebebe;
     box-shadow: 0px 2px 5px #bebebe;
     font-size: 14px;
@@ -376,9 +382,9 @@ input[type="button"] {
 input[type="submit"]:hover,
 input[type="button"]:hover {
     background-color: #375A9A;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#11233D), to(#375A9A));
-    background-image: -webkit-linear-gradient(#11233D, #375A9A);
-    background-image: linear-gradient(#11233D, #375A9A);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#212222), to(#375A9A));
+    background-image: -webkit-linear-gradient(#212222, #375A9A);
+    background-image: linear-gradient(#212222, #375A9A);
 }
 #pagetop {
     clear: both;
@@ -386,7 +392,7 @@ input[type="button"]:hover {
 #pagetop a {
     color: #FFF;
     font-size: 10px;
-    background-color: #11233D;
+    background-color: #212222;
     text-decoration: none;
     text-align: center;
     width: 10em;

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>事業内容｜株式会社ウイズ・ワン</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- レスポンシブを無効にする
+<link href="css/style-s.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" type="text/css">
+<link href="css/style-m.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)" type="text/css">-->
+<link href="css/jquery.fs.boxer.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+<script type="text/javascript" src="js/wiss1.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+  setInterval("slideSwitch()", 4000);
+
+  //メニューバーにマウスポインタを置いた時の処理
+  $('#menubar li').hover(function() {
+      //置いた場合
+      $("ul:not(:animated)", this).slideDown();
+  }, function() {
+      //離した場合
+      $("ul.child",this).slideUp();
+  });
+
+  $('.boxer').boxer();
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+     // スクロールの速度
+     var speed = 1000; // ミリ秒
+     // アンカーの値取得
+     var href= $(this).attr("href");
+     // 移動先を取得
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     // 移動先を数値で取得
+     var position = target.offset().top;
+     // スムーススクロール
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<div id="container">
+    <header>
+    <br />
+          <h5><p><a href="" style="float:right;">▷︎個人情報保護方針</a></p></h5>
+          <h5><p><a href="mailto:info@wiss1.co.jp" style="float:right;">▷︎お問い合わせ</a></p></h5>
+    <br />
+          <a href="./index.html"><img src="images/home_Logo.jpg" width="180" height="54" style="float:left"></a>
+          <nav id="menu">
+              <ul id="menubar">
+                  <li><a href="">会社情報<span>Corporate Information</span></a>
+                      <ul class="child">
+                          <li><a href="./company.html">会社概要<span>Company Overview</span></a></li>
+                          <li><a href="./orga.html">組織構成<span>Organization</span></a></li>
+                          <li><a href="./current.html">役員<span>Directors</span></a></li>
+                          <li><a href="./access.html">アクセス<span>Access</span></a>
+                      </ul>
+                  </li>
+                  <li><a href="">事業案内<span>Business Guide</span></a>
+                      <ul class="child">
+                          <li><a href="./business.html">事業内容<span>Business</span></a></li>
+                          <li><a href="./customer.html">取引先<span>Customer</span></a></li>
+                          <li><a href="./service.html">開発実績<span>Achievements</span></a></li>
+                          <li><a href="./overseas.html">海外事業展開<span>Overseas Deployment</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="">ソフトウェア技術本部<span>Software</span></a>
+                      <ul class="child">
+                          <li><a href="./solution.html">SIソリューション事業部<span>Solution</span></a></li>
+                          <li><a href="./technology.html">先端テクノロジー事業部<span>Technology</span></a></li>
+                          <li><a href="./infra.html">インフラ事業部<span>Infrastructure</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="recruit/index.html" target="_blank">採用情報<span>Recruiting</span></a>
+                  </li>
+              </ul>
+          </nav>
+    </header>
+    <br />
+
+    <div id="contents">
+    <div id="contents-in">
+    <div id="main">
+            <section>
+                <!--<h2 id="businessinfo">事業案内</h2>-->
+                <section>
+                <h3 id="business">事業内容</h3>
+                <ul>
+                  <font size="2">
+                    <p>
+                      当社では主にオープンシステム開発を中心とした業務システムの提案、システム開発を行っています。<br/> 
+                      現在は大手SIer殿や大手電機メーカー殿との共同作業が中心ですが、単なる開発としてではなく上流工程（要件定義・システム設計）
+                      から下流工程（開発・導入支援）まで幅広く手がけています。
+                      総合的なサービスを高い品質、納期で提供しお客様より高い信頼を得ています。<br/>
+                      <br/>
+                      開発に当たっては言語やフレームワーク、ベンダーの種類にもこだわらず、お客様のニーズに柔軟に対応して、
+                      コストパッケージに優れた高品質なアプリケーションを実現します。また、技術革新にもいち早く対応し常にお客様のニーズに応えるべく取り組みを行っています。<br/>
+                      <br/>
+                      開発実績としては、受発注システムなどの業務システムをはじめ、Web系システム、通信系システムなどがあり、
+                      多方面のお客様にご満足をいただいています。今までの開発経験で培った技術力のみならず、業種向けアプリケーションの開発を通じて蓄積した業務知識を生かして、
+                      お客様の業界特有の業務処理に対応できるのが、ウイズ・ワンのアプリケーション開発の特色となっています。<br/>
+                      <br/>
+                    </p>
+                  </font>
+                  <li>■開発手法</li>
+                    <font size="2">
+                      <p>
+                        弊社は、スパイラル開発／ウォーターフォール開発などの開発手法を問わず開発現場の特性に合う、様々なプロジェクトに参画しています。<br>
+                        また、作業工程においては要求分析～保守運用に至るまで、全ての開発工程に対応が可能です。
+                      </p>
+                    <font size="1">
+                      <p>※ウォーターフォール形：システム全体の要求を一度にヒアリングし、設計・実装・検証までの工程を順次完結させる方式。<br>
+                         ※スパイラル形：反復型の開発として、機能を徐々に積み上げていく方式。
+                      </p>
+                    </font>
+                  <br/>
+                  <li>■保有スキル／開発可能分野</li>
+                    <table class="ta1 mb1em">
+                      <tr>
+                          <th>ハードウェア</th>
+                          <td>【汎用機】富士通、日立製作所、日本電気、ＩＢＭ、その他<br>
+                              【オープン系】ＰＣ、ＵＮＩＸ等の各種マシン
+                          </td>
+                      </tr>
+                      <tr>
+                          <th>ＯＳ</th>
+                          <td>UNIX（solaris、HP‐UX、AIX）、Linux、MS（WINDOWS）</td>
+                      </tr>
+                      <tr>
+                          <th>ＤＢ</th>
+                          <td>Oracle、DB２、Symfoware、Sybase、SQLserver、Postgres</td>
+                      </tr>
+                      <tr>
+                          <th>Ｗｅｂ技術</th>
+                          <td>HTML、XML、JSP／Servlet、EJB、Perl、PHP</td>
+                      </tr>
+                      <tr>
+                          <th>言語＆ﾂｰﾙ</th>
+                          <td>C、C++、VC、VB、PL/SQL、Java、ASM PL/I、COBOL、FORTRAN、Delphi、corba</td>
+                      </tr>
+                    </table>
+                    <br/>
+                  <li>■開発心得</li>
+                  <font size="2">
+                    <p>納期を厳守いたします。<br>
+                      品質維持に努めます。<br>
+                      お客様とのリレーションを大切にいたします。<br>
+                    </p>
+                  </font>
+                  <br/>
+                  <li>■エンジニア派遣業務</li>
+                  <font size="2">
+                    <p>セキュリティの確保及び各種法規のコンプライアンスの観点から、お客様先での業務のウェイトが向上しております。<br>
+                      通常の業務請負体制での業務への対応に加えて労働者派遣事業法に基づいたシステムエンジニア、プログラマーの派遣サービスも提供させて頂いております。お客様が必要とされる技術力・能力を持つ人材を、必要なとき、必要な人数、必要な期間、適正価格でお客様先に派遣いたします。<br>
+                      （派遣認可番号：特13-304285) 
+                    </p>
+                  </font>
+                 </ul> 
+                </section>
+            </section>
+
+    </div><!--/main-->
+    </div><!--/contents in-->
+
+    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+    </div><!--/contents-->
+
+</div><!--/container-->
+
+<footer>
+    <small>Copyright &copy; WISS1, Inc. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>

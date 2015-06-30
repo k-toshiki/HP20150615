@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>会社概要｜株式会社ウイズ・ワン</title>
+<meta name="viewport" content="width=device-width">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- レスポンシブを無効にする
+<link href="css/style-s.css" rel="stylesheet" type="text/css" media="only screen and (max-width:480px)" type="text/css">
+<link href="css/style-m.css" rel="stylesheet" type="text/css" media="only screen and (min-width:481px) and (max-width:800px)" type="text/css">-->
+<link href="css/jquery.fs.boxer.min.css" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.fs.boxer.min.js"></script>
+<script type="text/javascript" src="js/wiss1.js"></script>
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+  setInterval("slideSwitch()", 4000);
+
+  //メニューバーにマウスポインタを置いた時の処理
+  $('#menubar li').hover(function() {
+      //置いた場合
+      $("ul:not(:animated)", this).slideDown();
+  }, function() {
+      //離した場合
+      $("ul.child",this).slideUp();
+  });
+
+  $('.boxer').boxer();
+
+  // #で始まるアンカーをクリックした場合に処理
+  $('a[href^=#]').click(function() {
+     // スクロールの速度
+     var speed = 1000; // ミリ秒
+     // アンカーの値取得
+     var href= $(this).attr("href");
+     // 移動先を取得
+     var target = $(href == "#" || href == "" ? 'html' : href);
+     // 移動先を数値で取得
+     var position = target.offset().top;
+     // スムーススクロール
+     $('body,html').animate({scrollTop:position}, speed, 'swing');
+     return false;
+  });
+});
+</script>
+</head>
+
+<body id="top">
+
+<div id="container">
+    <header>
+    <br />
+          <h5><p><a href="" style="float:right;">▷︎個人情報保護方針</a></p></h5>
+          <h5><p><a href="mailto:info@wiss1.co.jp" style="float:right;">▷︎お問い合わせ</a></p></h5>
+    <br />
+          <a href="./index.html"><img src="images/home_Logo.jpg" width="180" height="54" style="float:left"></a>
+          <nav id="menu">
+              <ul id="menubar">
+                  <li><a href="">会社情報<span>Corporate Information</span></a>
+                      <ul class="child">
+                          <li><a href="./company.html">会社概要<span>Company Overview</span></a></li>
+                          <li><a href="./orga.html">組織構成<span>Organization</span></a></li>
+                          <li><a href="./current.html">役員<span>Directors</span></a></li>
+                          <li><a href="./access.html">アクセス<span>Access</span></a>
+                      </ul>
+                  </li>
+                  <li><a href="">事業案内<span>Business Guide</span></a>
+                      <ul class="child">
+                          <li><a href="./business.html">事業内容<span>Business</span></a></li>
+                          <li><a href="./customer.html">取引先<span>Customer</span></a></li>
+                          <li><a href="./service.html">開発実績<span>Achievements</span></a></li>
+                          <li><a href="./overseas.html">海外事業展開<span>Overseas Deployment</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="">ソフトウェア技術本部<span>Software</span></a>
+                      <ul class="child">
+                          <li><a href="./solution.html">SIソリューション事業部<span>Solution</span></a></li>
+                          <li><a href="./technology.html">先端テクノロジー事業部<span>Technology</span></a></li>
+                          <li><a href="./infra.html">インフラ事業部<span>Infrastructure</span></a></li>
+                      </ul>
+                  </li>
+                  <li><a href="recruit/index.html" target="_blank">採用情報<span>Recruiting</span></a>
+                  </li>
+              </ul>
+          </nav>
+    </header>
+    <br />
+
+    <div id="contents">
+    <div id="contents-in">
+    <div id="main">
+        <section>
+                <!-- <h2 id="companyinfo">会社情報</h2> -->
+               <section>
+                    <h3 id="company">会社概要</h3>
+                    <br/>
+                    <br/>
+                    <table class="ta1 mb1em">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社ウイズ・ワン</td>
+                        </tr>
+                        <tr>
+                            <th>本社所在地</th>
+                            <td>〒103-0011<br />
+                                東京都中央区日本橋大伝馬町3-3&nbsp;&nbsp;日本橋大伝馬町ビル 2F、4F、5F<br />
+                                【2F】営業本部、SE事業本部<br />
+                                【4F】総務部、経理部／受付<br />
+                                【5F】設計部、開発部
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>2000万円（授権払込資本　4800万円）</td>
+                        </tr>
+                        <tr>
+                            <th>連絡先</th>
+                            <td>
+                                電話：03-5623-6711（代表）<br />
+                                ファックス：03-5623-6712<br />
+                                メール：<a href="mailto:info@wiss1.co.jp">info@wiss1.co.jp</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>設立</th>
+                            <td>1999年1月1日</td>
+                        </tr>
+                        <tr>
+                            <th>決算月</th>
+                            <td>12月31日（年1回）</td>
+                        </tr>
+                        <tr>
+                            <th>従業員数</th>
+                            <td>47名（営業 3名、SE 22名、PG 20名、事務 2名）<br />
+                                42名（協力会社・契約社員）
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>役員</th>
+                            <td>
+                                代表取締役&nbsp;&nbsp;柴田 美知男<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小原 紹五<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;岡田 武士<br>
+                                取締役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;井手 浩太<br>
+                                執行役員&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;柴崎 和幸<br>
+                                監査役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工藤 浩昭<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宇都 陸海(ﾃﾞｨｽｺﾑ株式会社 代表取締役社長)<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;門田 正徳(ﾕｰ・ｱﾝﾄﾞ・ｱｰｽ株式会社 代表取締役社長)<br>
+                                相談役&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Udaya Mohan Shrestha(Web_ParkNepal Pvt.Ltd CEO)<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>取引先銀行</th>
+                            <td>みずほ銀行、三井住友銀行、東京信用金庫、三菱東京UFJ銀行</td>
+                        </tr>
+                        <tr>
+                            <th>現地法人</th>
+                            <td>WISS1(thAI)CO.Ltd、WISS1(NEPAL)CO.Ltd<br>WISS1 Philippines CO.Ltd（2008年度設立予定）</td>
+                        </tr>
+
+                    </table>
+                </section>
+        </section>
+    </div><!--/main-->
+    </div><!--/contents in-->
+
+    <p align="center"><a href="#"><img src="images/pagetop.jpg" height="50"></a></p>
+
+    </div><!--/contents-->
+
+</div><!--/container-->
+
+<footer>
+    <small>Copyright &copy; WISS1, Inc. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>
